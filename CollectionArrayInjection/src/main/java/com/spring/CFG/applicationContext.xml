@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop https://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+
+	<bean id="curr" class="java.util.Date" />
+	<bean id="dobb" class="java.util.Date">
+		<property name="year" value="90" />
+		<property name="date" value="22" />
+		<property name="month" value="11"></property>
+	</bean>
+
+	<bean id="cg" class="com.spring.ArrayDemo.ArrayInjection">
+		<property name="marks">
+			<array>
+				<value>10</value>
+				<value>100</value>
+				<value>1000</value>
+				<value>10000</value>
+			</array>
+		</property>
+		<property name="dop">
+			<array>
+				<ref bean="curr" />
+				<ref bean="dobb" />
+			</array>
+		</property>
+
+	</bean>
+	<bean id="sysdate" class="java.util.Date" />
+	<bean id="prp" class="java.util.Date">
+		<property name="year" value="110" />
+		<property name="month" value="12" />
+	</bean>
+
+	<bean id="dtt" class="com.spring.ArrayDemo.DateInsertion">
+		<property name="dt">
+			<array>
+				<ref bean="sysdate" />
+				<ref bean="prp" />
+
+			</array>
+		</property>
+	</bean>
+
+	<bean id="lst" class="com.spring.ArrayDemo.ListInsertionDemo">
+		<property name="name">
+			<list value-type="java.lang.String">
+				<value>deependra</value>
+				<value>sing</value>
+				<value>choiuhan</value>
+				<value>king</value>
+			</list>
+		</property>
+		<property name="datess">
+			<list>
+				<ref bean="sysdate" />
+				<ref bean="prp" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="gui" class="com.spring.SetDemo.SetInsertionDemo">
+		<constructor-arg name="numbers">
+			<set value-type="java.lang.Integer">
+				<value>9755587</value>
+				<value>76383</value>
+				<value>973738</value>
+				<value>937377</value>
+				<value>975587</value>
+				<value>234587</value>
+				<value>234587</value>
+			</set>
+		</constructor-arg>
+		<constructor-arg name="dops">
+			<set value-type="java.lang.Integer">
+			<ref bean="curr"/>
+			<ref bean="dobb"/>
+			</set>
+		</constructor-arg>
+		
+	</bean>
+	
+     <bean id="gp" class="com.spring.MAPTest.MapInsertionDemo">
+     <constructor-arg>
+     <map>
+     <entry key="deep" value-ref="curr"></entry>
+     
+     <entry key="chouhan" value-ref="dobb"></entry>
+     
+     <entry>
+     
+     <key><value>fry</value></key>
+     <ref bean="curr"/>
+     
+     </entry>
+     
+     </map>
+     
+     </constructor-arg>
+     
+     </bean>
+
+
+<bean id="por" class="com.spring.property.PropertyDEMO">
+<property name="logon">
+<props>
+<prop key="deep">deep</prop>
+
+<prop key="raj">deep</prop>
+<prop key="sing">deep</prop>
+<prop key="deisps">deep</prop>
+<prop key="deisps">deep</prop>
+</props>
+</property>
+
+</bean>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</beans>

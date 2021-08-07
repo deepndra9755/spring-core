@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-autowire="no"  xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    
+  <bean id="pod" class="com.online.couriour.DTDCservice"  />
+  <bean id="pojj" class="com.online.couriour.BlueDartservice" primary="true"  />
+  
+  <bean id="flct" class="com.online.platform.FlipcartOn" autowire="constructor">
+  <constructor-arg ref="pod"> 
+  </constructor-arg>
+
+  </bean>
+  
+ 
+
+</beans>

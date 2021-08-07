@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+<!--     <bean id="Cls" class="java.lang.Class" factory-method="forName"> -->
+<!--     <constructor-arg value="java.util.Date"></constructor-arg> -->
+<!--     </bean> -->
+<!--     <bean id="gt" class="com.spring.DemoApp.FactoryMethod" factory-method="getOBJ"> -->
+<!--     <constructor-arg value="java.util.Date"></constructor-arg> -->
+<!--     </bean>  this is not working-->
+
+<bean id="dtd" class="java.util.Calendar" factory-method="getInstance"/>
+    
+<bean id="ko" class="java.lang.String">
+<constructor-arg value="deep"/>
+</bean>
+<bean id="jo" factory-bean="ko" factory-method="concat">
+<constructor-arg value="raj"/>
+</bean>
+</beans>

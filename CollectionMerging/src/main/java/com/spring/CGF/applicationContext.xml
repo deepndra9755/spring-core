@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans default-merge="true" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+<bean id="hope" class="com.spring.merging.ListMerging" abstract="true">
+   <property name="name">
+   <list>
+   <value>dipendra</value>
+   <value>singh</value>
+   <value>chouhan</value>
+   <value>mca</value>
+   <value>freasher</value>
+   </list>
+   </property>
+</bean>
+<bean id="absOV" class="com.spring.merging.ListMerging" parent="hope">
+<property name="name">
+<list><value>java</value>
+<value>developer</value>
+<value>developer</value>
+<value>indore</value>
+</list>
+
+</property>
+</bean>
+
+</beans>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+   
+    <bean id="yup" class="com.spring.CarIM.CarDemo" abstract="true">
+<!--     <property name="carNum" value="1234"></property> -->
+<!--     <property name="ceat" value="5"></property> -->
+<!--     <property name="color" value="blue"></property> -->
+    <property name="gear" value="5"></property>
+    <property name="name" value="swiftD"></property>
+<!--    <property name="owner" value="dipendra"></property> -->
+<!--    <property name="modelNum" value="12345"></property> -->
+   <property name="hechek" value="yes"></property> 
+    </bean>
+      <bean id="opi" class="com.spring.CarIM.CarDemo" parent="yup">
+    <property name="carNum" value="1234"></property>
+    
+    <property name="color" value="red"></property>
+   <property name="owner" value="raj"></property>
+   <property name="modelNum" value="9868"></property>
+   
+    </bean>
+
+</beans>

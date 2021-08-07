@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+<bean id="dos" class="java.util.Date"/>
+<bean class="com.spring.customer.DefaultDem">
+<constructor-arg ref="dos"/>
+<constructor-arg>
+<list>
+<value>dipendra</value>
+<value>singh</value>
+<value>narendra</value>
+<value>chouhan</value>
+</list>
+</constructor-arg>
+</bean> 
+<bean id="kj" class="com.spring.customer.DefaultDem" name="koppp">
+<constructor-arg ref="dos"/>
+<constructor-arg>
+<list>
+<value>shivam</value>
+<value>singh</value>
+<value>narendra</value>
+<value>chouhan</value>
+</list>
+</constructor-arg>
+</bean> 
+</beans>
